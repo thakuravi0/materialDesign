@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:background="@color/colorBack"
+    android:focusableInTouchMode="true"
+    tools:context="com.sivanta.loginapp.LoginActivity">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp">
+
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="LOGIN"
+    android:textColor="@color/textColor"
+    android:textSize="25dp"
+    android:textStyle="bold"
+   android:layout_marginTop="30dp"
+    />
+    <android.support.design.widget.TextInputLayout
+       android:id="@+id/layout_email"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+       android:textColorHint="@color/colorHint">
+       <EditText
+           android:id="@+id/editTextEmail"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="@string/hint_email"
+           android:inputType="textEmailAddress"
+           android:textColor="@color/textColor"
+           />
+   </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/layout_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+        android:textColorHint="@color/colorHint">
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_email"
+            app:passwordToggleTint="@color/colorHint"
+            android:layout_marginTop="45dp"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:textColor="@color/textColor" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textColor"
+        android:checked="false"
+        android:layout_marginTop="20dp"
+        android:text="Remember Me" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/buttoncolor"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/loginbtn"
+        android:textColor="@color/textColor"
+        android:text="Login"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/signbtn"
+        android:layout_width="match_parent"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_height="70dp"
+        android:text="Sign Up"
+        android:onClick="signUp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@color/buttoncolor"
+        android:textColor="@color/textColor"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
